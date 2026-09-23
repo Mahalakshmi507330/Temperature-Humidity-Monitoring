@@ -1,0 +1,65 @@
+ESP32 Temperature and Humidity Monitoring
+
+Project Title
+EnviroTrack: IoT-Based Temperature and Humidity Monitoring Using ESP32 and DHT22
+
+Problem Statement
+Monitoring temperature and humidity is useful in many environments. This project uses an ESP32 and DHT22 sensor to measure temperature and humidity and sends the collected data to the ThingSpeak cloud platform for monitoring through graphs.
+
+Objectives
+To measure temperature and humidity using the DHT22 sensor.
+To use ESP32 for collecting sensor data.
+To send sensor data to the ThingSpeak cloud platform using Wi-Fi.
+To display temperature and humidity readings using graphs.
+To understand the basic working of an IoT monitoring system.
+Components and Software Used- Hardware:
+ESP32
+DHT22 Temperature and Humidity Sensor Software and Platforms:
+Wokwi
+MicroPython
+ThingSpeak
+GitHub
+Circuit Diagram The DHT22 sensor is connected to the ESP32 as follows:
+DHT22 VCC → ESP32 3V3
+DHT22 DATA → ESP32 GPIO 15
+DHT22 GND → ESP32 GND
+LED - ->GND
+LED + ->220(resistor)
+220(resistor)->GND
+Circuit diagram:
+
+Circuit Diagram
+
+Working Principle The DHT22 sensor measures temperature and humidity from the surrounding environment. The ESP32 reads these values through GPIO 15. The ESP32 connects to Wi-Fi and sends the sensor readings to the ThingSpeak cloud platform. Temperature is stored in Field 1 and humidity is stored in Field 2. ThingSpeak displays the received data using graphs.
+
+Program Explanation The program uses the DHT22 sensor library to read temperature and humidity values. The ESP32 connects to the Wokwi Wi-Fi network. After connecting to Wi-Fi, the program reads the temperature and humidity from the DHT22 sensor. The values are sent to ThingSpeak using the ThingSpeak Write API Key. The program repeats the process after a delay.
+
+Output The Wokwi Serial Monitor displays the temperature, humidity and ThingSpeak response.
+
+ThingSpeak displays:
+
+Field 1 → Temperature
+Field 2 → Humidity
+Output screenshot: Wowki_Output
+
+Applications
+Environmental monitoring
+Smart home systems
+Weather monitoring
+Greenhouse monitoring
+IoT-based temperature and humidity monitoring
+Limitations
+The system depends on Wi-Fi connectivity for sending data to ThingSpeak.
+The project is implemented as a Wokwi simulation.
+Sensor readings may vary depending on the sensor and environment.
+Future Scope
+Add more sensors.
+Use a real ESP32 and DHT22 hardware setup.
+Add alerts when temperature or humidity crosses a limit.
+Develop a mobile or web dashboard for monitoring.
+Store and analyze sensor data for longer periods.
+Team Members' Details Name: Mahalakshmi Register Number: U03ZW24S0221
+Team Members:Shivaranjan k, Brinda Jennifer
+
+https://wokwi.com/projects/475682178620641281
+https://thingspeak.mathworks.com/channels/3500612
